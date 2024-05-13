@@ -1,0 +1,235 @@
+/* Start Variables */
+:root
+{
+    --first-color: #E13859;
+    --second-color: #333333;
+    --third-color: #ffffff;
+    --background-color: #000000;
+    --text-first-color: #ffffff;
+    --text-second-color: #757575;
+    --text-third-color: #ffffff;
+    --text-forth-color: #ffffff;
+    --button-first-color: #ffffff;
+    --button-text-first-color: #757575;
+}
+[data-theme='light']
+{
+    --background-color: #ffffff;
+    --text-first-color: #757575;
+    --text-forth-color: #000000;
+    --button-first-color: #757575;
+    --button-text-first-color: #ffffff;
+}
+/* End Variables */
+
+/* Start Alarm Details */
+.alarm_details
+{
+    width: 100%;
+    height: 90vh;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 25px;
+}
+.alarm_details .ring_time
+{
+    text-align: center;
+    color: var(--text-second-color);
+}
+.alarm_time
+{
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 50px;
+    color: var(--text-second-color);
+    position: relative;
+}
+.time
+{
+    display: flex;
+    justify-content: center;
+}
+.time ul
+{
+    position: absolute;
+    z-index: 0;
+    list-style-type: none;
+    top: 0;
+    transition: 0.5s;
+}
+.time ul li
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.time ul li:nth-of-type(2)
+{
+    color: var(--first-color);
+}
+.time input
+{
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    height: 104px;
+    width: 104px;
+    background-color: var(--background-color);
+    border: none;
+    font-size: 50px;
+    text-align: center;
+    outline: none;
+    color: var(--first-color);
+}
+.hoursBtns
+{
+    padding: 25px 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40%;
+}
+.hoursBtns button
+{
+    width: 104px;
+    height: 75px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.repate
+{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.repate button
+{
+    background-color: var(--button-first-color);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--button-text-first-color);
+    padding: 5px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.repate button.active
+{
+    background-color: var(--first-color);
+    color: var(--third-color);
+}
+
+.alarm_name
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: var(--text-forth-color);
+}
+.alarm_name input
+{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: var(--text-forth-color);
+    text-align: end;
+    padding: 0 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.alarm_name input:focus 
+{
+    border: solid 1px var(--first-color);
+}
+.alarm_details_Buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.alarm_details_Buttons button
+{
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--first-color);
+    border: none;
+    cursor: pointer;
+}
+/* End Alarm Details */
+
+
+.customPage
+{
+    display: none;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    z-index: 1;
+}
+
+.customPage .done
+{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--first-color);
+    border: none;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-third-color);
+    cursor: pointer;
+}
+
+
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .alarm_time
+    {
+        gap: 0px;
+    }
+    .repate button
+    {
+        padding: 5px 25px;
+    }
+    .alarm_name h2
+    {
+        font-size: 16px;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */

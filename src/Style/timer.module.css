@@ -1,0 +1,198 @@
+/* Start Variables */
+:root
+{
+    --first-color: #E13859;
+    --second-color: #333333;
+    --third-color: #ffffff;
+    --background-color: #000000;
+    --text-first-color: #ffffff;
+    --text-second-color: #757575;
+    --text-third-color: #ffffff;
+    --text-forth-color: #ffffff;
+    --button-first-color: #ffffff;
+    --button-text-first-color: #757575;
+    --button-second-color: #4E1118;
+    --glass-background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+[data-theme='light']
+{
+    --background-color: #ffffff;
+    --text-first-color: #757575;
+    --text-forth-color: #000000;
+    --button-first-color: #757575;
+    --button-text-first-color: #ffffff;
+    --glass-background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));
+}
+/* End Variables */
+
+.timer
+{
+    width: 100%;
+    height: 90vh;
+    padding: 50px 0;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+}
+.timer .time
+{
+    width: 500px;
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.time_part
+{
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+.timer .time input
+{
+    width: 95px;
+    height: 95px;
+    background-color: transparent;
+    border: solid 1px var(--first-color);
+    border-radius: 10px;
+    font-size: 64px;
+    color: var(--text-first-color);
+    text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button 
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.timer .time input:focus
+{
+    outline: none;
+}
+.timer .time label
+{
+    color: var(--text-forth-color);
+}
+.time_saves
+{
+    width: 500px;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    overflow-y: scroll;
+    gap: 50px;
+}
+.time_saves::-webkit-scrollbar {
+    width: 5px;
+}
+
+.time_saves::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.time_saves::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    border-radius: 6px;
+}
+
+.time_saves::-webkit-scrollbar-thumb:hover {
+    background: var(--text-forth-color);
+    cursor: pointer;
+}
+.time_saves .save
+{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--first-color);
+    border-radius: 100px;
+    color: var(--text-forth-color);
+    cursor: pointer;
+}
+.time_saves .save.active
+{
+    background-color: var(--button-second-color);
+    color: var(--text-third-color);
+}
+.start_Btn
+{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start_Btn button
+{
+    width: 200px;
+    background-color: var(--first-color);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 0;
+    font-size: 18px;
+    color: var(--text-third-color);
+    cursor: pointer;
+}
+.timer_progress
+{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    top: -10vh;
+    background: var(--glass-background);
+    backdrop-filter: blur(5px);
+    
+}
+
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .timer .time
+    {
+        width: 100%;
+        padding: 0 25px;
+    }
+    .timer .time input
+    {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    .time_saves
+    {
+        width: 100%;
+        padding: 0 25px;
+        gap: 20px;
+    }
+    .time_saves .save
+    {
+        width: 75px;
+        height: 75px;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */

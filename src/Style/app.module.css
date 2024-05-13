@@ -1,0 +1,29 @@
+/* Start Variables */
+:root
+{
+    --first-color: #E13859;
+    --second-color: #333333;
+    --third-color: #ffffff;
+    --background-color: #000000;
+    --text-first-color: #ffffff;
+    --text-second-color: #757575;
+    --text-third-color: #ffffff;
+    --text-forth-color: #ffffff;
+}
+[data-theme='light']
+{
+    --background-color: #ffffff;
+    --text-first-color: #757575;
+    --text-forth-color: #000000;
+}
+/* End Variables */
+
+/* Start Main Rules */
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+}
+/* End Main Rules */

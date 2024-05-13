@@ -1,0 +1,145 @@
+/* Start Variables */
+:root
+{
+    --first-color: #E13859;
+    --second-color: #333333;
+    --third-color: #ffffff;
+    --background-color: #000000;
+    --text-first-color: #ffffff;
+    --text-second-color: #757575;
+    --text-third-color: #ffffff;
+    --text-forth-color: #ffffff;
+    --button-first-color: #ffffff;
+    --button-text-first-color: #757575;
+}
+[data-theme='light']
+{
+    --background-color: #ffffff;
+    --text-first-color: #757575;
+    --text-forth-color: #000000;
+    --button-first-color: #757575;
+    --button-text-first-color: #ffffff;
+}
+/* End Variables */
+
+
+/* Start Clock */
+.clock
+{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+    color: var(--button-first-color);
+}
+.clocksContainer
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.clocksContainer .clockItem
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+}
+.clocksContainer .clockItem .clockName
+{
+    font-weight: 700;
+    color: var(--text-first-color);
+}
+.clocksContainer .clockItem .countryClock
+{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 700;
+    color: var(--text-forth-color);
+}
+.clocksContainer .clockItem .countryClock span
+{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-forth-color);
+}
+.clock_add_buttons
+{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+.clock_add_buttons button
+{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--first-color);
+    border: none;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-third-color);
+    cursor: pointer;
+}
+button.buttonDisabled
+{
+    display: none;
+}
+div.buttonDisabled
+{
+    display: none;
+}
+.selectBtn
+{
+    width: 20px;
+    height: 20px;
+    border: solid 3px var(--text-second-color);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.selectBtn.active
+{
+    background-color: var(--first-color);
+    border: solid 3px var(--first-color);
+}
+/* End Clock */
+
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .clocksContainer
+    {
+        width: 75%;
+        gap: 10px;
+    }
+    .clocksContainer .clockItem
+    {
+        font-size: 16px;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */

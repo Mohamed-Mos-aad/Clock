@@ -1,0 +1,273 @@
+/* Start Variables */
+:root
+{
+    --first-color: #E13859;
+    --second-color: #333333;
+    --third-color: #ffffff;
+    --background-color: #000000;
+    --text-first-color: #ffffff;
+    --text-second-color: #757575;
+    --text-third-color: #ffffff;
+    --text-forth-color: #ffffff;
+    --button-first-color: #ffffff;
+    --button-text-first-color: #757575;
+    --button-second-color: #4E1118;
+    --glass-background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+[data-theme='light']
+{
+    --background-color: #ffffff;
+    --text-first-color: #757575;
+    --text-forth-color: #000000;
+    --button-first-color: #757575;
+    --button-text-first-color: #ffffff;
+    --glass-background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));
+}
+/* End Variables */
+/* Start Alarm */
+
+/* alarm */
+.alarm
+{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    position: relative;
+}
+
+/* alarm_item */
+.alarms_container
+{
+    width: 50%;
+}
+.alarm_item
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-second-color);
+    padding: 25px;
+    margin-bottom: 10px;
+}
+.alarm_item.active
+{
+    color: var(--text-forth-color);
+}
+.alarm_item .alarm_details 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.alarm_item .alarm_details .alarm_time
+{
+    font-size: 46px;
+    line-height: 30px;
+}
+.alarm_item .alarm_details .alarm_time span
+{
+    font-size: 16px;
+    margin-left: 5px;
+}
+.alarm_item .alarm_details .alarm_repate
+{
+    font-size: 16px;
+}
+.alarm_active_button
+{
+    width: 75px;
+    height: 40px;
+    background-color: var(--text-second-color);
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.alarm_active_button::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--text-second-color);
+    border-radius: 25px;
+    border: solid 10px var(--third-color);
+    transition: 0.3s;
+}
+.alarm_item.active .alarm_active_button
+{
+    background-color: var(--first-color);
+}
+.alarm_item.active .alarm_active_button::after
+{
+    left: 35px;
+    background-color: var(--third-color);
+    border: solid 10px var(--third-color);
+}
+.alarm_active_button.active
+{
+    background-color: var(--first-color);
+}
+.selectBtn
+{
+    width: 20px;
+    height: 20px;
+    border: solid 3px var(--text-second-color);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.selectBtn.active
+{
+    background-color: var(--first-color);
+    border: solid 3px var(--first-color);
+}
+
+/* alarm_add_buttons */
+.alarm_add_buttons
+{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+.alarm_add_buttons button
+{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--first-color);
+    border: none;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-third-color);
+    cursor: pointer;
+}
+button.buttonDisabled
+{
+    display: none;
+}
+div.buttonDisabled
+{
+    display: none;
+}
+button i
+{
+    font-size: 26px;
+}
+a
+{
+    text-decoration: none;
+}
+.alarm_ring
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: -10vh;
+    background: var(--glass-background);
+    display: none;
+    z-index: 1;
+}
+.alarm_ring button
+{
+    width: 200px;
+    background-color: var(--first-color);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 0;
+    font-size: 18px;
+    color: var(--text-third-color);
+    cursor: pointer;
+}
+
+/* End Alarm */
+
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    /* alarm_item */
+    .alarms_container
+    {
+        width: 90%;
+    }
+    .alarm_item .alarm_details .alarm_time
+    {
+        font-size: 36px;
+        line-height: 20px;
+    }
+    .alarm_item .alarm_details .alarm_time span
+    {
+        font-size: 14px;
+        margin-left: 0;
+    }
+    .alarm_item .alarm_details .alarm_repate
+    {
+        font-size: 14px;
+    }
+    .alarm_active_button
+    {
+        width: 60px;
+        height: 30px;
+        background-color: var(--text-second-color);
+        border-radius: 25px;
+        position: relative;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .alarm_active_button::after
+    {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: var(--text-second-color);
+        border-radius: 25px;
+        border: solid 5px var(--text-first-color);
+        transition: 0.5s;
+    }
+    .alarm_active_button.active::after
+    {
+        left: 30px;
+        border: solid 5px var(--text-first-color);
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+    /* alarm_item */
+    .alarms_container
+    {
+        width: 85%;
+    }
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */

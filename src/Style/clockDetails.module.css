@@ -1,0 +1,137 @@
+/* Start Variables */
+:root
+{
+    --first-color: #E13859;
+    --second-color: #333333;
+    --third-color: #ffffff;
+    --background-color: #000000;
+    --text-first-color: #ffffff;
+    --text-second-color: #757575;
+    --text-third-color: #ffffff;
+    --text-forth-color: #ffffff;
+    --button-first-color: #ffffff;
+    --button-text-first-color: #757575;
+}
+[data-theme='light']
+{
+    --background-color: #ffffff;
+    --text-first-color: #757575;
+    --text-forth-color: #000000;
+    --button-first-color: #757575;
+    --button-text-first-color: #ffffff;
+}
+/* End Variables */
+
+
+/* Start Clock Details */
+.clockDetails
+{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    gap: 25px;
+}
+.clocksSearch 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.clocksSearch input
+{
+    width: 75%;
+    height: 50px;
+    background-color: transparent;
+    border: solid 1px var(--text-first-color);
+    border-radius: 50px;
+    outline: none;
+    transition: 0.3s;
+    caret-color: var(--first-color);
+    padding: 0 25px;
+    font-size: 18px;
+    color: var(--text-forth-color);
+}
+.clocksSearch input:focus
+{
+    border: solid 1px var(--first-color);
+}
+.clocksContainer
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 15px;
+}
+.clocksContainer::-webkit-scrollbar {
+    width: 5px;
+}
+
+.clocksContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.clocksContainer::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    border-radius: 6px;
+}
+
+.clocksContainer::-webkit-scrollbar-thumb:hover {
+    background: var(--text-forth-color);
+    cursor: pointer;
+}
+.clock
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    font-size: 18px;
+    color: var(--text-forth-color);
+    cursor: pointer;
+}
+/* End Clock Details */
+
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .clocksSearch input
+    {
+        width: 75%;
+        height: 40px;
+        font-size: 14px;
+    }
+    .clocksContainer
+    {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .clocksContainer a
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .clock
+    { 
+        width: 75%;
+        font-size: 10px;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+    .clocksContainer
+    {
+        width: 90%;
+        padding: 0 10px;
+    }
+    .clock
+    { 
+        font-size: 16px;
+    }
+}
+/* End Media Query */

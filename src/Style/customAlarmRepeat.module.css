@@ -1,0 +1,89 @@
+/* Start Variables */
+:root
+{
+    --first-color: #E13859;
+    --second-color: #333333;
+    --third-color: #ffffff;
+    --background-color: #000000;
+    --text-first-color: #ffffff;
+    --text-second-color: #757575;
+    --text-third-color: #ffffff;
+    --text-forth-color: #ffffff;
+    --button-first-color: #ffffff;
+    --button-text-first-color: #757575;
+}
+[data-theme='light']
+{
+    --background-color: #ffffff;
+    --text-first-color: #757575;
+    --text-forth-color: #000000;
+    --button-first-color: #757575;
+    --button-text-first-color: #ffffff;
+}
+/* End Variables */
+
+.customRepeat
+{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+    background-color: var(--background-color);
+}
+.customRepeat .day
+{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-forth-color);
+}
+.customRepeat .day label
+{
+    font-size: 20px;
+}
+.customRepeat .day .checkBox
+{
+    width: 20px;
+    height: 20px;
+    border: solid 3px var(--text-second-color);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.customRepeat .day .checkBox.active
+{
+    background-color: var(--first-color);
+    border: solid 3px var(--first-color);
+}
+
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .customRepeat .day
+    {
+        width: 75%;
+        align-items: space-between;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */

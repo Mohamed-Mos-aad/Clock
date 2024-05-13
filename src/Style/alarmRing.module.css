@@ -1,0 +1,64 @@
+/* Start Variables */
+:root
+{
+    --first-color: #E13859;
+    --second-color: #333333;
+    --third-color: #ffffff;
+    --background-color: #000000;
+    --text-first-color: #ffffff;
+    --text-second-color: #757575;
+    --text-third-color: #ffffff;
+    --text-forth-color: #ffffff;
+    --button-first-color: #ffffff;
+    --button-text-first-color: #757575;
+    --button-second-color: #4E1118;
+}
+[data-theme='light']
+{
+    --background-color: #ffffff;
+    --text-first-color: #757575;
+    --text-forth-color: #000000;
+    --button-first-color: #757575;
+    --button-text-first-color: #ffffff;
+}
+/* End Variables */
+
+
+.timer_progress_container
+{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.progress_bar
+{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: conic-gradient(var(--first-color) 360deg,#757575  0deg);
+    border-radius: 50%;
+    font-size: 36px;
+    color: var(--text-first-color);
+    transition-timing-function: linear;
+}
+.progress_bar::after
+{
+    content: '';
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    z-index: 1;
+}
+.progress_bar_container
+{
+    position: absolute;
+    z-index: 2;
+}
