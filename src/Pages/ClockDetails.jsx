@@ -13,7 +13,7 @@ export default function ClockDetails() {
 
     async function fetchData()
     {
-        let {data} = await axios.get('http://api.timezonedb.com/v2.1/list-time-zone?key=BRC0HPIDSUTU&format=json');
+        let {data} = await axios.get('https://api.timezonedb.com/v2.1/list-time-zone?key=BRC0HPIDSUTU&format=json');
         setData(data.zones);
     }
 
